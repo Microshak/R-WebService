@@ -7,6 +7,15 @@ function(msg=""){
   list(msg = paste0("The message is: '", msg, "'"))
 }
 
+#* @get /healthcheck
+function(req, res){
+ res$status <- 204
+return(res)
+
+}
+
+
+
 #* Plot out data from the iris dataset
 #* @param spec If provided, filter the data to only this species (e.g. 'setosa')
 #* @get /plot
